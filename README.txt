@@ -1,1 +1,1 @@
-README
+Welcome to my CleanSweep Web Application! This app helps households manage chore schedules by assigning and tracking tasks. It’s designed to make it easier to stay organized and keep your home running smoothly. It is perfect for families, roommates, or anyone sharing a space! This project is not yet finished, but please click around to see what is in the works. 
