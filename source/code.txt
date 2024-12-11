@@ -1,0 +1,11 @@
+ADD IN PRFILE IMAGE UPLOAD
+
+<form action="/upload-profile-photo" method="POST" enctype="multipart/form-data">
+    <label for="profileImage">Upload New Profile Image:</label>
+    <input type="file" id="profileImage" name="profileImage" accept="image/*" required>
+    <button type="submit">Upload</button>
+</form>
+
+DISPLAY IMAGE IN HANDLEBARS
+
+<img src="{{ user.profile_image }}" alt="Profile Image">

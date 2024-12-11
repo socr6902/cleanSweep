@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create or Join a Household</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        form {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            margin-bottom: 10px;
+            color: #333;
+            display: block;
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Create Household Form -->
+        <form method="POST" action="/create-household">
+            <h1>Create a Household</h1>
+            <div class="form-group">
+                <label for="inputUsername1">Username</label>
+                <input type="text" id="inputUsername1" name="username" placeholder="Enter username" required>
+            </div>
+            <button type="submit">Create Household</button>
+        </form>
+
+        <!-- Join Household Form -->
+        <form method="POST" action="/join-household">
+            <h1>Join a Household</h1>
+            <div class="form-group">
+                <label for="inputUsername2">Username</label>
+                <input type="text" id="inputUsername2" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="householdId">Household ID</label>
+                <input type="text" id="householdId" name="household_id" placeholder="Enter Household ID" required>
+            </div>
+            <button type="submit">Join Household</button>
+        </form>
+    </div>
+</body>
+</html>

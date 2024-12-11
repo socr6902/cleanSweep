@@ -1,0 +1,30 @@
+{
+    "name": "clean-sweep",
+    "main": "src/index.js",
+    "dependencies": {
+        "axios": "^1.1.3",
+        "body-parser": "1.20.0",
+        "bootstrap": "^5.3.3",
+        "ejs": "^3.1.8",
+        "ejs-lint": "^0.3.0",
+        "express": "^4.19.2",
+        "express-handlebars": "^7.1.2",
+        "express-session": "1.17.3",
+        "install": "^0.13.0",
+        "npm": "^10.5.1",
+        "pg-promise": "^10.11.1"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "mocha": "^6.2.3",
+        "nodemon": "^2.0.7",
+        "npm-run-all": "^4.1.5"
+    },
+    "scripts": {
+        "prestart": "npm uninstall bcrypt && npm install bcrypt && npm install",
+        "start": "./node_modules/nodemon/bin/nodemon.js -L clean-sweep",
+        "test": "mocha",
+        "testandrun": "npm run prestart && npm run test && npm start"
+    }
+}
